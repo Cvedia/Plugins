@@ -5,6 +5,7 @@
 */
 #pragma once
 
+#include <mutex>
 #include "defines.h"
 
 extern "C" EXPORT void registerHandler();
