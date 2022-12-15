@@ -5,7 +5,6 @@
 */
 #pragma once
 
-#include <mutex>
 #include "defines.h"
 
 extern "C" EXPORT void registerHandler();
@@ -24,7 +23,7 @@ namespace cvedia {
 		public:
 			EXPORT static expected<pCValue> postYoloX(internal::InferenceContext& ctx, std::vector<xt::xarray<float>> & output, CValue* inferenceConf);
 		private:
-			static int labelToInt(cvec& labels, std::string label);
+			static int labelToInt(cvec const& labels, std::string label);
 
 			static __shared_mutex_class cacheMux_;
 			static std::map<std::pair<int, int>, cache> cache_;

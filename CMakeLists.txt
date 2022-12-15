@@ -11,9 +11,21 @@ if (WITH_POST_CLASSIFIER_MODULE)
 endif()
 
 if (WITH_POST_YOLOV4_MODULE)
-    subdirs("PostYoloV4")
+    subdirs("Yolo/PostYoloV4")
+endif()
+
+if (WITH_POST_YOLOV5_MODULE)
+    subdirs("Yolo/PostYoloV5")
+endif()
+
+if (WITH_POST_YOLOV6_MODULE)
+    subdirs("Yolo/PostYoloV6")
+endif()
+
+if (WITH_POST_YOLOV7_MODULE)
+    subdirs("Yolo/PostYoloV7")
 endif()
 
 if (WITH_POST_YOLOX_MODULE)
-    subdirs("PostYoloX")
+    subdirs("Yolo/PostYoloX")
 endif ()
